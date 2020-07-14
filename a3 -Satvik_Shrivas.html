@@ -1,0 +1,77 @@
+<!DOCTYPE HTML> 
+<html> 
+  
+<head> 
+    <title> 
+        JavaScript   formatted date dd/mm/yyyy. 
+    </title> 
+    <style>
+        .btn-group button {
+  background-color: #4CAF50; 
+  border: 1px solid green; 
+  padding: 10px 24px; 
+  cursor: pointer; 
+  float: left;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; 
+}
+.center {
+  
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border: 3px solid green;
+  
+}
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.btn-group button:hover {
+  background-color: #3e8e41;
+}
+    </style>
+</head> 
+  
+<body style="text-align:center" id="body"> 
+    <h1 style="color:green">   Assignment 3     </h1> 
+    <div class="btn-group">
+        <div class="center">
+    <button onclick="format1()">  <p style="color:rgba(255, 255, 255, 0.945); font-size: 15px; font-weight: bold;"> Get Date - DD / MM / YYYY</p>  </button> 
+    <button onclick="format2()">  <p style="color:rgba(255, 255, 255, 0.945); font-size: 15px; font-weight: bold;"> Get Date - DD - MM - YYYY</p>  </button> 
+    <button onclick="format3()">  <p style="color:rgba(255, 255, 255, 0.945); font-size: 15px; font-weight: bold;"> Get Date - MM / DD / YYYY</p>  </button> 
+    <button onclick="format4()">  <p style="color:rgba(255, 255, 255, 0.945); font-size: 15px; font-weight: bold;"> Get Date - MM - DD - YYYY</p>  </button> 
+    </div>
+    </div>
+    <br>
+    <div class="center">
+    <p id="sample" style=" color:rgb(179, 28, 28);  font-size: 25px;  font-weight: bold;"> </p> 
+</div>
+   <script> 
+        var temp = document.getElementById("sample"); 
+        var Date = new Date(); 
+
+        var dd = Date.getDate(); 
+        var mm = Date.getMonth() + 1; 
+        var yyyy = Date.getFullYear(); 
+        if (dd < 10)dd = '0' + dd; 
+        if (mm < 10) mm = '0' + mm; 
+    
+        var form1 = dd + ' / ' + mm + ' / ' + yyyy; 
+        var form2 = dd + ' - ' + mm + ' - ' + yyyy; 
+        var form3 = mm + ' / ' + dd + ' / ' + yyyy; 
+        var form4 = mm + ' - ' + dd + ' - ' + yyyy; 
+  
+        function format1(){temp.innerHTML = form1;} 
+        function format2(){temp.innerHTML = form2;}
+        function format3(){temp.innerHTML = form3;}
+        function format4(){temp.innerHTML = form4;}
+    </script> 
+</body> 
+  
+</html> 

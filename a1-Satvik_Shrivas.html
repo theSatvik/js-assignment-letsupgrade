@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 1 -Letsupgrade</title>
+        <h2>Get Date and Time in This Cool Format</h2>
+    </head>
+    <body style="text-align:center">
+        <script>
+            var CurrDate=new Date();
+            var CurrDay=CurrDate.getDay();
+            var Days=["Sunday","Monday","Tuesday","Wednesday","Thrusday","Friday","Saturday"];
+            document.write("Today is: "+Days[CurrDay]+'<br>');
+
+            var CurrHour=CurrDate.getHours();
+            var AM_PM = CurrHour>=12?"PM":"AM";
+            
+            CurrHour=CurrHour%12==0?12:CurrHour;
+
+            var Currmin=CurrDate.getMinutes();
+            Currmin=Currmin<10?"0"+Currmin:Currmin;
+
+            var Currtime=CurrHour+" "+AM_PM+" : "+Currmin+" : "+CurrDate.getMilliseconds();
+            document.write("Current time is " + Currtime);
+        </script>
+    </body>
+</html>
