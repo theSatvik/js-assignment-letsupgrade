@@ -2,7 +2,7 @@
 
 Data types in JS : 
 
-There are 8 basic data types in JavaScript:-
+There are 7 primitive data types in JavaScript:-
 
 1. Number - For numbers of any kind: integer or floating-point, integers are limited by ±2^53.
 2. bigint - This is for integer numbers of arbitrary length.
@@ -10,9 +10,8 @@ There are 8 basic data types in JavaScript:-
 4. Boolean - Used for logical operations i.e. for true/false.
 5. Null -  null for unknown values – a standalone type that has a single value null.
 6. Undefined - Used for unassigned values – a standalone type that has a single value undefined.
-7. Object  - Used for more complex data structures.
-8. Symbol - Used for unique identifiers.
-
+7. Symbol - Used for unique identifiers.
+*note- Object  - Used for more complex data structures.
 According to the value, we could determine under which data type the value comes 
 using the Typeof operator - 
 
@@ -28,3 +27,62 @@ typeof 10n // "bigint"
 typeof true // "boolean"
 
 typeof "foo" // "string"
+Boolean======>>
+
+A boolean represents only one of two values: true, or false. Think of a boolean as an on/off or a yes/no switch.
+var boo1 = true;
+var boo2 = false;
+
+----------
+
+Number======>>
+
+There is only one type of Number in JavaScript. Numbers can be written with or without a decimal point. A number can also be +Infinity, -Infinity, and NaN (not a number).
+var num1 = 32;
+var num2 = +Infinity;
+----------------
+
+String======>>
+
+Strings are used for storing text. Strings must be inside of either double or single quotes. In JS, Strings are immutable (they cannot be changed).
+var str1 = 'hello, it is me';
+var str2 = "hello, it's me";
+
+--------------
+
+Null======>>
+
+Null has one value: null. It is explicitly nothing.
+var nothing = null;
+Undefined
+A variable that has no value is undefined.
+var testVar;
+console.log(testVar); // undefined
+---------------
+Symbol======>>
+
+Symbols are new in ES6. A Symbol is an immutable primitive value that is unique. For the sake of brevity, that is the extent that this article will cover Symbols.
+const mySymbol = Symbol('mySymbol');
+-----------
+BigInt======>>
+
+The BigInt type is a numeric primitive in JavaScript that can represent integers with arbitrary precision. With BigInts, you can safely store and operate on large integers even beyond the safe integer limit for Numbers. A BigInt is created by appending n to the end of an integer or by calling the constructor.
+
+> const x = 2n ** 53n;
+9007199254740992n
+> const y = x + 1n; 
+9007199254740993n
+
+----------------------------------------------------------
+
+OBJECTS:----->
+
+Objects are not a primitive data Type.
+An object is a collection of properties. These properties are stored in key/value pairs. Properties can reference any type of data, including objects and/or primitive values.
+var obj = {
+  key1: 'value',
+  key2: 'value',
+  key3: true,
+  key4: 32,
+  key5: {}
+}
