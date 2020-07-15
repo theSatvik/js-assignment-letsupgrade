@@ -1,0 +1,30 @@
+// Author - Satvik Shrivas
+
+Data types in JS : 
+
+There are 8 basic data types in JavaScript:-
+
+1. Number - For numbers of any kind: integer or floating-point, integers are limited by ±2^53.
+2. bigint - This is for integer numbers of arbitrary length.
+3. string - A string may have zero or more characters, there’s no separate single-character type.
+4. Boolean - Used for logical operations i.e. for true/false.
+5. Null -  null for unknown values – a standalone type that has a single value null.
+6. Undefined - Used for unassigned values – a standalone type that has a single value undefined.
+7. Object  - Used for more complex data structures.
+8. Symbol - Used for unique identifiers.
+
+According to the value, we could determine under which data type the value comes 
+using the Typeof operator - 
+
+The typeof operator returns the type of the argument. It’s useful when we want to process values of different types differently or just want to do a quick check.
+
+It supports two forms of syntax:
+
+As an operator: typeof x.
+As a function: typeof(x).
+
+typeof 10n // "bigint"
+
+typeof true // "boolean"
+
+typeof "foo" // "string"
