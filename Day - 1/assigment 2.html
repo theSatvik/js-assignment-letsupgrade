@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSIGNMENT 2</title>
+</head>
+<body>
+    <!-- Write the difference between var, let and count with code examples. -->
+    <script>
+    
+//var
+// Var is the global function scope. If we assign the variable inside the function or variable declaration we can use the value from anywhere in the program. The scope of a variable defined with the keyword "var" is limited to the "function" within which it is defined. If it is defined outside any funstion, the scope of the variable is global. var is "Function scoped".
+var name="Satvik" //string
+var age="19" //number
+var canFly=false; //boolean
+var languages=['Hindi','English']; //array
+console.log({name,age,canFly,languages});
+
+//objects
+var friends={
+    name:"Jonas",
+    Hobby:"Coding"
+}
+console.log(friends);
+
+var a;//undefined
+//console.log(a);
+var a=null;
+console.log(a);
+
+//let
+// Let is a blocked scope variable. Scope of let variable is inside the block only, i.e. , within {} brackets. It can't be using outside of curly brackets.
+{
+   let name ="Satvik shrivas";
+    console.log("Using Let:", name);
+}
+console.log(name)
+
+//const means constant
+// A const need to be defined, it cannot be undefined. A const value cannot be changed.
+const country="India"; //const needs initialisation
+console.log(country);
+const fruits=["mango","apple"]
+console.log(fruits)
+fruits.push('banana');
+console.log(fruits)
+</script>
+</body>
+</html>
