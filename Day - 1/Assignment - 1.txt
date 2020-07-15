@@ -1,0 +1,117 @@
+
+//Author - Satvik Shrivas 
+Console functions in JS:-
+
+1.Console.log()-It is used to print the output to the console.
+examples:-
+
+console.log('seems good');//string 
+-->seems good
+console.log(78);//integer
+ -->78
+console.log({a:true, b:"hey", c:3.67}); // object  
+-->{a: true, b: "hey", c: 3.67}
+
+2.Console.error-
+A. Used to log error message to the console and also in the testing of code.
+B. By default the error message will be highlighted with red color.
+
+Examples-console.error('Caution error here');
+-->Caution error here
+
+3.Console.warn()-
+A.Used to log warning message to the console.
+B.By default the warning message will be highlighted with yellow color.
+
+examples-console.warn('warning');
+-->warning
+
+4.console.clear() - 
+A. Used to clear the console.
+B. In case of Chrome a simple overlayed text will be printed like : ‘Console was cleared’ 
+   while in firefox no message is returned.
+
+5.console.time() and console.timeEnd() - 
+ 
+ The amount of time spend by a block or a function, we can make use of the time() and
+ timeEnd() methods provided by the javascript console object.
+
+examples-
+console.time('time start'); 
+ { 
+    let something="something";   
+ } 
+console.timeEnd('time start'); 
+-->time start: 0.009765625ms
+
+6.console.table()-
+
+A.This method allows us to generate a table inside a console. 
+B.The input must be an array or an object which will be shown as a table.
+C.Useful in terms of Analysis of data .
+
+examples-
+console.table({personA:"ramesh",personB:"Suresh",personC:"Disha",});
+
+
+7.console.count()-
+This method is used to count the number that the function hit by this counting method.
+
+Examples-
+
+let a=1;
+console.count(a);
+a=2;
+console.count(a);
+a=1;
+console.count(a);
+a=1;
+console.count(a);
+
+
+-->
+1: 1
+2: 1
+1: 2
+1: 3
+
+8.console.group() and console.groupEnd()-
+
+A. group() and groupEnd() methods of the console object allows us to group contents
+ in a separate block, which will be indented.
+
+B.Just like the time() and the timeEnd() they also accepts label, again of same value.
+
+
+examples-
+	
+console.group('start'); 
+  console.warn('warning'); 
+  console.error('error '); 
+  console.log('hahaha'); 
+console.groupEnd('start'); 
+console.log('new'); 
+
+9.Custom Console Logs (uses CSS)
+A. User can add Styling to the console logs in order to make logs Custom .
+B.The Syntax for it is to add the css styling as a parameter to the logs which will replace %c in the logs.
+
+examples -
+
+const forspace = '20px'; 
+  const toyellow =  
+        `padding: ${forspace}; background-color: white; color: yellow; font-style:  
+         italic; border: 1px solid black; font-size: 2em;`; 
+const toblack =  
+        `padding: ${forspace}; background-color: white; color: black; font-style:  
+         italic; border: 1px solid black; font-size: 2em;`; 
+  console.log('%clets', toyellow);
+   console.log('%cUpgrade', toblack);
+
+delete forspace;
+delete toyellow;
+delete toblack;
+
+-->
+lets (will be written in yellow , with other CSS styles)
+Upgrade(will be written in black , with other CSS styles)
