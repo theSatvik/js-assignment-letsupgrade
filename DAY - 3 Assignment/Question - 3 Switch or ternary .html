@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question - 3</title>
+</head>
+<body style="text-align: center;">
+     <h1>Student Grading</h1>
+     
+     <ul>Grade - A : 100 - 91 </ul>
+     <ul>Grade - B : 90 - 81  </ul>
+     <ul>Grade - C : 80 - 71  </ul>
+     <ul>Grade - D : 70 - 61  </ul>
+     <ul>Grade - E : 60 - 51  </ul>
+     <ul>Grade - F : 50 - 0   </ul>
+
+      <script>
+          let marks=+prompt('Enter Your Marks','Example - 78');
+          if(isNaN(marks))console.log('Invalid Not a Number');
+          else 
+          {   let Grade;
+              switch(Math.ceil(marks/10))
+              {
+              case 10 : Grade='A';break;
+              case 9 : Grade='B';break;
+              case 8 : Grade='C';break;
+              case 7 : Grade='D';break;
+              case 6 : Grade='E';break;
+              default : Grade='F';
+              }
+              console.log(`Marks are ${marks} and the grade is ${Grade}`);
+          }
+      </script>
+    
+</body>
+</html>
