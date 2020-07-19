@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 3</title>
+    <style> 
+    .button {
+  background-color: #1277a5; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+        #myButton {
+            margin:auto;
+            width: 150px;
+          padding: 10px 50px;
+          background-color: rgb(0, 0, 0);
+          color: rgba(22, 205, 238, 0.705);
+        }
+        .button1 {border-radius: 12px;}
+        </style>
+</head>
+<body style="text-align: center; background-color: rgba(0, 0, 0, 0.89)" >
+    <h1 style="color:seashell;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><u>Click the "Try it" button to set the boxShadow property :<u></h1>
+
+<button class ="button button1" onclick="myFunction()" >Try it</button><br><br><br>
+<div id="myButton" >
+
+    <h1 style="text-align: center; " > Shopping list </h1>
+    <ol style="margin-right: 10px;">
+        <li>Cheese</li>
+        <li>Icecream</li>
+        <li>Coke</li>
+        <li>Chips</li>
+        <li>Wine</li>
+        <li>Lasagna</li>
+    </ol>
+  </div>  
+   
+    
+    <script>
+        var shoppingList=['Cheese','Icecream','Coke','Chips','Wine'];
+        var shoppingBasket=[...shoppingList];
+          shoppingBasket.push('Lasagna');
+        console.log(shoppingList);
+        console.log(shoppingBasket);
+        function myFunction() {
+          document.getElementById("myButton").style.boxShadow = "10px 1px 30px lightblue";
+          
+        }
+        </script>
+</body>
+</html>
