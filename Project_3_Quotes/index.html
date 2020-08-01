@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes</title>   
+   
+</head>
+<body>
+    <h1 style="text-align: center;">Quotes</h1>
+    <h2 style="text-align: center; color: blue;" id="quotes"></h2>
+    
+    <script type="text/javascript">
+        let Quotes = ["“Don't forget to smile in any situation. As long as you are alive, there will be better things later, and there will be many.”",//1
+        "“When do you think people die? When they are shot through the heart by the bullet of a pistol? No. When they are ravaged by an incurable disease? No. When they drink a soup made from a poisonous mushroom!? No! It’s when… they are forgotten.”",//2
+        "“You might be alone at the moment... But someday... You'll definitely find nakama! No one is born in this world to be alone!”",//3
+        "“By experiencing both victory and defeat, running away and shedding tears, a man will become a man. It's okay to cry, but you have to move on.”",//4
+        "“A man's dream will never die!”",//5
+        "“Pirates are evil? The Marines are righteous? These terms have always changed throughout the course of history! Kids who have never seen peace and kids who have never seen war have different values! Those who stand at the top determine what's wrong and what's right! This very place is neutral ground! Justice will prevail, you say? But of course it will! Whoever wins this war becomes justice!”",//6
+        "“Do not give reasons to love that you received!”",//7
+        "“In case we become candles, I want to have a nice pose”",//8
+        " Discover your true self, the true world, become stronger! However long it may take, I shall await you at the top. Surpass this sword! Surpass me!",//9
+        "“You are the moon unaware of the dawn. May your purpose be fulfilled and cast nine shadows on the night woven of 20 years and you shall know the brilliance of the dawn.”",]
+        function display(){
+            document.getElementById('quotes').innerHTML =Quotes[Math.floor(Math.random()*10)] ;
+        }
+        display()
+        setInterval(display,5000)
+        </script>
+</body>
+
+
+</html>
