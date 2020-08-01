@@ -1,18 +1,25 @@
 console.log("Calculator");
-
-var First=+prompt("Enter your first number","E.g:6");
-var operator = prompt("Enter your second number","E.g:'+'");
-var Second=+prompt("Enter your second number","E.g:7");
-if(isNaN(first+second))console.log("Invalid - Not a number");
-else 
+var operation = window.prompt("Enter the operator:( For Squareroot input value in num1 only)",'Ex.: + for addition');    
+var num1 = +window.prompt("Enter the 1st number:"); console.log(num1);
+var num2 = +window.prompt("Enter the 2nd number:"); console.log(num2);
+switch(operation)
 {
-    switch(operator)
-    {
-        case '+' : ans=first+second;
-        case '-' : ans=first+second;
-        case '/' : ans=first+second;
-        case '*' : ans=first+second;
-        case '+' : ans=first+second;
-        case '+' : ans=first+second;
-    }
+        case'+':
+        console.log(num1+num2);
+        break;
+        case'-':
+        console.log(num1-num2);
+        break;
+        case'*':
+        console.log(num1*num2);
+        break;
+        case'/':
+        console.log(num1/num2);
+        break;
+        case'**':
+        console.log(num1**2);
+        break;
+        case'%':
+        console.log(num1%num2);
+        break;
 }
