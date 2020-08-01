@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timer</title>
+    <script type="text/javascript">
+        let min = +prompt("Enter time in minutes")
+        let sec = min*60;
+
+        function countdown() {
+            let time = document.getElementById("time");
+            if(sec<0){
+                alert("time up");
+
+            }
+            else{
+                min = Math.floor(sec/60)
+                time.innerText = min+" : "+(sec - (min*60))
+                sec--;
+                setTimeout(countdown,1000)
+            }
+
+        }   
+      
+      </script>
+      
+      <body onload="countdown()">
+        <h1 style="text-align: center;">Timer</h1> 
+        <h2 style="text-align: center;" id = "time"></h2>  
+        
+      </body>
+</html>
