@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <!-- Write a program to make a To-Do List which has the following functions:
+    a. Add
+    b. Remove
+    c. Should store the data in local storage-->
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Minor Project - LetsUpgrade </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body style="background-color: rgb(32, 28, 28);">
+<h1 style=color:lime><u>TODOList</u></h1>
+<h2 style=color:rgba(188,228,197,0.884)> Add / Remove an element</h2>
+
+<input type="text" id="inputValue"/>
+<button style="background-color:rgb(31, 175, 74); color:white;" onclick="addItem()">Add Item</button>
+<button style="background-color:rgb(150, 42, 42); color:white;" onclick="removeItem()">Remove Item</button>
+
+<ul id="dynamicList"></ul>
+
+<script src="Todo.js"></script>
+</body>
+</html>
